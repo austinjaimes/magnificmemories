@@ -1,8 +1,9 @@
----
----
 <style>
+  body {
+    background-color: #faf5ed;
+  }
   section.contacto {
-    background-color: #fff;
+    background-color: #faf5ed;
     padding: 4rem 2rem;
     font-family: sans-serif;
     max-width: 600px;
@@ -11,7 +12,7 @@
   }
 
   section.contacto h2 {
-    color: #d97706;
+    color: #c6a664;
     font-size: 2rem;
     margin-bottom: 1rem;
     text-align: center;
@@ -39,7 +40,7 @@
   select,
   textarea {
     padding: 0.6rem 0.75rem;
-    border: 1.5px solid #d97706;
+    border: 1.5px solid #c6a664;
     border-radius: 6px;
     font-size: 1rem;
     font-family: inherit;
@@ -61,7 +62,7 @@
   }
 
   button[type="submit"] {
-    background-color: #d97706;
+    background-color: #c6a664;
     color: white;
     font-weight: 700;
     padding: 0.75rem;
@@ -73,17 +74,23 @@
   }
 
   button[type="submit"]:hover {
-    background-color: #b45309;
+    background-color: #b89a44;
   }
 </style>
 
-<section class="contacto" id="contacto">
+<section
+  style="background-color: #FAF5ED;"
+  class="contacto"
+  id="contacto"
+>
   <h2>Contáctanos</h2>
-  <p>Escríbenos y responderemos a la brevedad para ayudarte con tu invitación.</p>
+  <p>
+    Escríbenos y responderemos a la brevedad para ayudarte con tu invitación.
+  </p>
 
-  <form 
-    name="contacto-magnific-memories" 
-    method="POST" 
+  <form
+    name="contacto-magnific-memories"
+    method="POST"
     data-netlify="true"
     netlify-honeypot="bot-field"
   >
@@ -110,7 +117,11 @@
     </select>
 
     <label for="mensaje">Mensaje</label>
-    <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos más..." required></textarea>
+    <textarea
+      id="mensaje"
+      name="mensaje"
+      placeholder="Cuéntanos más..."
+      required></textarea>
 
     <div class="checkbox-group">
       <input id="privacidad" name="privacidad" type="checkbox" required />

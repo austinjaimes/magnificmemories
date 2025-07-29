@@ -1,8 +1,6 @@
----
----
 <style>
   section.paquetes {
-    background-color: #fff;
+    background-color: #FAF5ED;
     color: #333;
     padding: 4rem 2rem;
     font-family: sans-serif;
@@ -12,7 +10,7 @@
   .paquetes h2 {
     font-size: 2rem;
     margin-bottom: 0.5rem;
-    color: #d97706;
+    color: #C6A664;
   }
 
   .paquetes p {
@@ -28,10 +26,11 @@
   }
 
   .package-card {
-    border: 2px solid #d97706;
+    border: 2px solid #C6A664;
     border-radius: 0.75rem;
     padding: 2rem 1.5rem;
-    box-shadow: 0 2px 8px rgb(217 119 6 / 0.2);
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(198, 166, 100, 0.15);
     transition: transform 0.3s ease;
   }
 
@@ -43,14 +42,14 @@
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
-    color: #b45309;
+    color: #C6A664;
   }
 
   .package-price {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 1rem;
-    color: #d97706;
+    color: #E9C7C4;
   }
 
   .package-features {
@@ -66,7 +65,7 @@
   }
 
   .package-cta {
-    background-color: #d97706;
+    background-color: #C6A664;
     color: white;
     padding: 0.75rem 1.5rem;
     border-radius: 999px;
@@ -77,12 +76,16 @@
   }
 
   .package-cta:hover {
-    background-color: #b45309;
+    background-color: #b89a44;
   }
 
   @media (min-width: 768px) {
     .package-grid {
       grid-template-columns: repeat(3, 1fr);
+    }
+
+    .paquetes h2 {
+      font-size: 2.5rem;
     }
   }
 </style>
