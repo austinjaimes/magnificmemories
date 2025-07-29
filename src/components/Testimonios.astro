@@ -1,0 +1,150 @@
+---
+
+---
+
+<style>
+  section.opiniones {
+    background-color: #f3f4f6;
+    color: #333;
+    padding: 3rem 2rem;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+  }
+
+  .opiniones h2 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    color: #d97706;
+    font-weight: 700;
+  }
+
+  .opiniones p {
+    margin-bottom: 2rem;
+    font-size: 1.05rem;
+    color: #555;
+    font-weight: 500;
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .testimonial-card {
+    background: white;
+    border-radius: 0.75rem;
+    padding: 1.25rem 1.5rem;
+    box-shadow: 0 6px 15px rgba(217, 119, 6, 0.15);
+    text-align: left;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    position: relative;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  .testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(217, 119, 6, 0.25);
+  }
+
+  .testimonial-avatar {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 2.5px solid #d97706;
+    background-color: white;
+    color: #d97706;
+    font-weight: 700;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    box-shadow: 0 3px 8px rgba(217, 119, 6, 0.3);
+  }
+
+  .testimonial-content {
+    flex: 1;
+    position: relative;
+  }
+
+  .testimonial-quote-icon {
+    position: absolute;
+    top: -5px;
+    left: 0;
+    font-size: 2.2rem;
+    color: #d97706;
+    opacity: 0.2;
+    user-select: none;
+  }
+
+  .testimonial-text {
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 1.4;
+    color: #222;
+    margin-bottom: 0.9rem;
+    font-weight: 500;
+  }
+
+  .testimonial-author {
+    font-weight: 700;
+    color: #d97706;
+    font-size: 0.95rem;
+  }
+
+  @media (min-width: 768px) {
+    .testimonials-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>
+
+<section class="opiniones" id="opiniones">
+  <h2>Lo que dicen nuestros clientes</h2>
+  <p>Historias reales de eventos especiales gracias a Magnific Memories.</p>
+
+  <div class="testimonials-grid">
+    <article class="testimonial-card">
+      <div class="testimonial-avatar">A</div>
+      <div class="testimonial-content">
+        <div class="testimonial-quote-icon">“</div>
+        <p class="testimonial-text">
+          La invitación fue hermosa, fácil de compartir y todos mis invitados
+          quedaron encantados.
+        </p>
+        <p class="testimonial-author">— Andrea M.</p>
+      </div>
+    </article>
+
+    <article class="testimonial-card">
+      <div class="testimonial-avatar">S</div>
+      <div class="testimonial-content">
+        <div class="testimonial-quote-icon">“</div>
+        <p class="testimonial-text">
+          El equipo de Magnific Memories entendió perfectamente mi estilo y
+          entregó justo lo que quería.
+        </p>
+        <p class="testimonial-author">— Sergio L.</p>
+      </div>
+    </article>
+
+    <article class="testimonial-card">
+      <div class="testimonial-avatar">C</div>
+      <div class="testimonial-content">
+        <div class="testimonial-quote-icon">“</div>
+        <p class="testimonial-text">
+          Un servicio profesional y rápido, hicieron que mi evento fuera aún más
+          especial.
+        </p>
+        <p class="testimonial-author">— Carla R.</p>
+      </div>
+    </article>
+  </div>
+</section>

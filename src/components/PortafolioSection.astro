@@ -1,0 +1,97 @@
+---
+---
+<style>
+  section.portafolio {
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 4rem 2rem;
+    font-family: sans-serif;
+    text-align: center;
+  }
+
+  .portafolio h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .portafolio p {
+    margin-bottom: 2.5rem;
+    font-size: 1.1rem;
+    color: #555;
+  }
+
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .portfolio-item {
+    background: white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    text-align: left;
+  }
+
+  .portfolio-item img {
+    width: 100%;
+    display: block;
+    height: auto;
+  }
+
+  .portfolio-content {
+    padding: 1rem;
+  }
+
+  .portfolio-content h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #d97706;
+  }
+
+  .portfolio-content p {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: #666;
+  }
+
+  @media (min-width: 768px) {
+    .portfolio-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .portafolio h2 {
+      font-size: 2.5rem;
+    }
+  }
+</style>
+
+<section class="portafolio" id="portafolio">
+  <h2>Nuestro trabajo</h2>
+  <p>Invitaciones web hechas con amor y detalle para todo tipo de eventos.</p>
+
+  <div class="portfolio-grid">
+    <div class="portfolio-item">
+      <img src="https://www.ecoticias.com/wp-content/uploads/2024/06/Que-es-el-medio-ambiente.jpg" alt="Ejemplo 1" />
+      <div class="portfolio-content">
+        <h3>Boda Andrea & Luis</h3>
+        <p>Una invitación elegante con detalles en dorado y animaciones suaves.</p>
+      </div>
+    </div>
+    <div class="portfolio-item">
+      <img src="https://www.ecoticias.com/wp-content/uploads/2024/06/Que-es-el-medio-ambiente.jpg" alt="Ejemplo 2" />
+      <div class="portfolio-content">
+        <h3>XV Sofía</h3>
+        <p>Colorida, dinámica y con secciones personalizadas para fotos y música.</p>
+      </div>
+    </div>
+    <div class="portfolio-item">
+      <img src="https://www.ecoticias.com/wp-content/uploads/2024/06/Que-es-el-medio-ambiente.jpg" alt="Ejemplo 3" />
+      <div class="portfolio-content">
+        <h3>Bautizo Diego</h3>
+        <p>Un diseño tierno y minimalista, ideal para eventos familiares íntimos.</p>
+      </div>
+    </div>
+  </div>
+</section>

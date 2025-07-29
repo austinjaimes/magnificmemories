@@ -1,0 +1,130 @@
+---
+---
+<style>
+  section.paquetes {
+    background-color: #fff;
+    color: #333;
+    padding: 4rem 2rem;
+    font-family: sans-serif;
+    text-align: center;
+  }
+
+  .paquetes h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #d97706;
+  }
+
+  .paquetes p {
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+    color: #555;
+  }
+
+  .package-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .package-card {
+    border: 2px solid #d97706;
+    border-radius: 0.75rem;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 2px 8px rgb(217 119 6 / 0.2);
+    transition: transform 0.3s ease;
+  }
+
+  .package-card:hover {
+    transform: translateY(-8px);
+  }
+
+  .package-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #b45309;
+  }
+
+  .package-price {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #d97706;
+  }
+
+  .package-features {
+    text-align: left;
+    margin-bottom: 2rem;
+    list-style-type: none;
+    padding-left: 0;
+    color: #555;
+  }
+
+  .package-features li {
+    margin-bottom: 0.5rem;
+  }
+
+  .package-cta {
+    background-color: #d97706;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 999px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+  }
+
+  .package-cta:hover {
+    background-color: #b45309;
+  }
+
+  @media (min-width: 768px) {
+    .package-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>
+
+<section class="paquetes" id="paquetes">
+  <h2>Nuestros Paquetes</h2>
+  <p>Elige el paquete que mejor se adapte a tu evento y presupuesto.</p>
+
+  <div class="package-grid">
+    <article class="package-card">
+      <h3 class="package-title">Básico</h3>
+      <p class="package-price">$1,200 MXN</p>
+      <ul class="package-features">
+        <li>Diseño personalizado básico</li>
+        <li>Enlace para compartir</li>
+        <li>RSVP incluido</li>
+      </ul>
+      <a href="#solicitar" class="package-cta">Solicitar</a>
+    </article>
+
+    <article class="package-card">
+      <h3 class="package-title">Premium</h3>
+      <p class="package-price">$2,500 MXN</p>
+      <ul class="package-features">
+        <li>Diseño personalizado avanzado</li>
+        <li>Integración con música y fotos</li>
+        <li>RSVP + Confirmación por email</li>
+        <li>Asistencia técnica 24/7</li>
+      </ul>
+      <a href="#solicitar" class="package-cta">Solicitar</a>
+    </article>
+
+    <article class="package-card">
+      <h3 class="package-title">Personalizado</h3>
+      <p class="package-price">Desde $4,000 MXN</p>
+      <ul class="package-features">
+        <li>Diseño a medida completo</li>
+        <li>Funcionalidades exclusivas</li>
+        <li>Soporte premium</li>
+        <li>Consultoría y seguimiento</li>
+      </ul>
+      <a href="#solicitar" class="package-cta">Solicitar</a>
+    </article>
+  </div>
+</section>
