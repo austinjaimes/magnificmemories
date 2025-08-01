@@ -1,7 +1,3 @@
----
-
----
-
 <style>
   nav {
     background-color: #FAF5ED;
@@ -23,10 +19,13 @@
   }
 
   .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #C6A664;
-    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+
+  .logo img {
+    height: 70px;
+    width: auto;
   }
 
   .menu-toggle {
@@ -122,13 +121,15 @@
 
 <nav>
   <div class="nav-container">
-    <!-- Menú hamburguesa + Logo -->
-    <label class="menu-toggle" for="menu-checkbox"
-      >☰</label
-    >
-    <a class="logo" href="/">Magnific Memories</a>
+    <!-- Menú hamburguesa -->
+    <label class="menu-toggle" for="menu-checkbox">☰</label>
 
-    <!-- Checkbox oculto pero funcional -->
+    <!-- Logo como imagen -->
+    <a class="logo" href="/">
+      <img src="/images/logo.png" alt="Magnific Memories logo" />
+    </a>
+
+    <!-- Checkbox funcional -->
     <input type="checkbox" id="menu-checkbox" />
 
     <!-- Enlaces -->
