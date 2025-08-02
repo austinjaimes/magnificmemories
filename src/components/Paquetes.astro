@@ -1,4 +1,15 @@
 <style>
+  .subtitulo {
+    font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  }
+  .titulo {
+    font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+  }
   section.paquetes {
     background-color: #FAF5ED;
     color: #333;
@@ -91,43 +102,43 @@
 </style>
 
 <section class="paquetes" id="paquetes">
-  <h2>Nuestros Paquetes</h2>
-  <p>Elige el paquete que mejor se adapte a tu evento y presupuesto.</p>
+  <h2 class="titulo">Nuestros Paquetes</h2>
+  <p class="subtitulo">Elige el paquete que mejor se adapte a tu evento y presupuesto.</p>
 
   <div class="package-grid">
     <article class="package-card">
-      <h3 class="package-title">Básico</h3>
-      <p class="package-price">$1,200 MXN</p>
+      <h3 class="package-title titulo">Básico</h3>
+      <p class="package-price subtitulo">$1,200 MXN</p>
       <ul class="package-features">
-        <li>Diseño personalizado básico</li>
-        <li>Enlace para compartir</li>
-        <li>RSVP incluido</li>
+        <li class="subtitulo">Diseño personalizado básico</li>
+        <li class="subtitulo">Enlace para compartir</li>
+        <li class="subtitulo">RSVP incluido</li>
+      </ul>
+      <a href="#solicitar" class="package-cta subtitulo">Solicitar</a>
+    </article>
+
+    <article class="package-card">
+      <h3 class="package-title titulo">Premium</h3>
+      <p class="package-price subtitulo">$2,500 MXN</p>
+      <ul class="package-features">
+        <li class="subtitulo">Diseño personalizado avanzado</li>
+        <li class="subtitulo">Integración con música y fotos</li>
+        <li class="subtitulo">RSVP + Confirmación por email</li>
+        <li class="subtitulo">Asistencia técnica 24/7</li>
       </ul>
       <a href="#solicitar" class="package-cta">Solicitar</a>
     </article>
 
     <article class="package-card">
-      <h3 class="package-title">Premium</h3>
-      <p class="package-price">$2,500 MXN</p>
+      <h3 class="package-title titulo">Personalizado</h3>
+      <p class="package-price subtitulo">Desde $4,000 MXN</p>
       <ul class="package-features">
-        <li>Diseño personalizado avanzado</li>
-        <li>Integración con música y fotos</li>
-        <li>RSVP + Confirmación por email</li>
-        <li>Asistencia técnica 24/7</li>
+        <li class="subtitulo">Diseño a medida completo</li>
+        <li class="subtitulo">Funcionalidades exclusivas</li>
+        <li class="subtitulo">Soporte premium</li>
+        <li class="subtitulo">Consultoría y seguimiento</li>
       </ul>
-      <a href="#solicitar" class="package-cta">Solicitar</a>
-    </article>
-
-    <article class="package-card">
-      <h3 class="package-title">Personalizado</h3>
-      <p class="package-price">Desde $4,000 MXN</p>
-      <ul class="package-features">
-        <li>Diseño a medida completo</li>
-        <li>Funcionalidades exclusivas</li>
-        <li>Soporte premium</li>
-        <li>Consultoría y seguimiento</li>
-      </ul>
-      <a href="#solicitar" class="package-cta">Solicitar</a>
+      <a href="#solicitar" class="package-cta subtitulo">Solicitar</a>
     </article>
   </div>
 </section>

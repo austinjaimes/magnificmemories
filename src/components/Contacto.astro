@@ -1,4 +1,15 @@
 <style>
+  .titulo {
+    font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+  }
+  .subtitulo {
+    font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  }
   body {
     background-color: #faf5ed;
   }
@@ -83,8 +94,8 @@
   class="contacto"
   id="contacto"
 >
-  <h2>Contáctanos</h2>
-  <p>
+  <h2 class="titulo">Contáctanos</h2>
+  <p class="subtitulo">
     Escríbenos y responderemos a la brevedad para ayudarte con tu invitación.
   </p>
 
@@ -98,25 +109,25 @@
     <input type="hidden" name="form-name" value="contacto-magnific-memories" />
     <input type="hidden" name="bot-field" />
 
-    <label for="nombre">Nombre completo</label>
+    <label for="nombre" class="subtitulo">Nombre completo</label>
     <input id="nombre" name="nombre" type="text" required />
 
-    <label for="email">Correo electrónico</label>
+    <label for="email" class="subtitulo">Correo electrónico</label>
     <input id="email" name="email" type="email" required />
 
-    <label for="telefono">Teléfono</label>
+    <label for="telefono" class="subtitulo">Teléfono</label>
     <input id="telefono" name="telefono" type="text" />
 
-    <label for="paquete">Paquete de interés</label>
+    <label for="paquete" class="subtitulo">Paquete de interés</label>
     <select id="paquete" name="paquete" required>
-      <option value="" disabled selected>Selecciona un paquete</option>
-      <option value="basico">Básico</option>
-      <option value="premium">Premium</option>
-      <option value="personalizado">Personalizado</option>
-      <option value="otro">Otro / Consultar</option>
+      <option value="" disabled selected class="subtitulo">Selecciona un paquete</option>
+      <option value="basico" class="subtitulo">Básico</option>
+      <option value="premium" class="subtitulo">Premium</option>
+      <option value="personalizado" class="subtitulo">Personalizado</option>
+      <option value="otro" class="subtitulo">Otro / Consultar</option>
     </select>
 
-    <label for="mensaje">Mensaje</label>
+    <label for="mensaje" class="subtitulo">Mensaje</label>
     <textarea
       id="mensaje"
       name="mensaje"
@@ -125,9 +136,9 @@
 
     <div class="checkbox-group">
       <input id="privacidad" name="privacidad" type="checkbox" required />
-      <label for="privacidad">Acepto la política de privacidad</label>
+      <label for="privacidad" class="subtitulo">Acepto la política de privacidad</label>
     </div>
 
-    <button type="submit">Enviar</button>
+    <button type="submit" class="subtitulo">Enviar</button>
   </form>
 </section>
