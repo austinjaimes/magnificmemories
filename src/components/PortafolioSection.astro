@@ -16,6 +16,7 @@
     padding: 4rem 2rem;
     font-family: sans-serif;
     text-align: center;
+    margin-top: -70px;
   }
 
   .portafolio h2 {
@@ -37,12 +38,9 @@
   }
 
   .portfolio-item {
-    background: white;
     border-radius: 0.5rem;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    text-align: left;
-    transition: transform 0.3s ease;
+
   }
 
   .portfolio-item:hover {
@@ -70,17 +68,26 @@
     font-size: 1.1rem;
     color: #777;
   }
+  .button-card {
+    background-color: #365A63;
+    width: 120px;
+    height: 35px;
+    border-radius: 70px;
+    color: #FFFFFF;
+    cursor: pointer;
+    margin-top: 20px;
+  }
 
   @media (min-width: 768px) {
     .portfolio-grid {
       grid-template-columns: repeat(3, 1fr);
     }
-    .portafolio p {
-    font-size: 24px;
-  }
     .portafolio h2 {
       font-size: 84px;
     }
+    .portafolio p {
+    font-size: 24px;
+  }
     .portafolio-item img {
       max-height: 435px; 
       object-fit: cover;
@@ -93,30 +100,22 @@
 
   <div class="portfolio-grid">
     <div class="portfolio-item">
-      <a style="text-decoration: none;" href="https://magnificmemories.github.io/"><img src="/images/anainvitacion.png" alt="Ejemplo 1" />
-      <div class="portfolio-content">
-        <h3 class="titulo">Mis XV Ana</h3>
-        <p class="subtitulo">Una invitación personalizada con detalles en rosa y animaciones suaves.</p>
-      </div>
+      <a style="text-decoration: none;" href="https://magnificmemories.github.io/">
+        <img src="/images/celular1.png" alt="Ejemplo 1" />
       </a>
+      <button class="button-card">Clic aquí</button>
     </div>
     <div class="portfolio-item">
       <a style="text-decoration: none;" href="http://magnificmemories.github.io/boda-lulu-carlos/">
-      <img style="max-height: 435px; object-fit: cover;" src="/images/lulucarlosboda.png" alt="Ejemplo 2" />
-      <div class="portfolio-content">
-        <h3 class="titulo">Boda Lulu y Carlos</h3>
-        <p class="subtitulo">Una invitacion elegante personalizada.</p>
-      </div>
+      <img src="/images/celular2.png" alt="Ejemplo 2" />
       </a>
+      <button class="button-card">Clic aquí</button>
     </div>
     <div class="portfolio-item">
       <a style="text-decoration: none;" href="https://magnificmemories.github.io/xvzoemy/">
-      <img src="/images/zoemyinvitacion.png" alt="Ejemplo 3" />
-      <div class="portfolio-content">
-        <h3 class="titulo">XV Zoemy</h3>
-        <p class="subtitulo">Un diseño tierno y minimalista, personalizado con detalles rosas.</p>
-      </div>
+      <img src="/images/celular3.png" alt="Ejemplo 3" />
       </a>
+      <button class="button-card">Clic aquí</button>
     </div>
   </div>
 </section>
