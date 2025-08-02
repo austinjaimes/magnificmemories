@@ -24,13 +24,14 @@
 
   section.contacto h2 {
     color: #c6a664;
-    font-size: 2rem;
+    font-size: 48px;
     margin-bottom: 1rem;
     text-align: center;
   }
 
   section.contacto p {
     margin-bottom: 2rem;
+    font-size: 18px;
     text-align: center;
     color: #555;
   }
@@ -56,6 +57,9 @@
     font-size: 1rem;
     font-family: inherit;
     resize: vertical;
+  }
+  .labeltitle {
+    font-size: 18px;
   }
 
   textarea {
@@ -87,6 +91,14 @@
   button[type="submit"]:hover {
     background-color: #b89a44;
   }
+  @media (min-width: 768px) {
+    section.contacto h2 {
+    font-size: 84px;
+  }
+  section.contacto p {
+    font-size: 24px;
+  }
+  }
 </style>
 
 <section
@@ -109,25 +121,25 @@
     <input type="hidden" name="form-name" value="contacto-magnific-memories" />
     <input type="hidden" name="bot-field" />
 
-    <label for="nombre" class="subtitulo">Nombre completo</label>
+    <label for="nombre" class="subtitulo labeltitle">Nombre completo</label>
     <input id="nombre" name="nombre" type="text" required />
 
-    <label for="email" class="subtitulo">Correo electrónico</label>
+    <label for="email" class="subtitulo labeltitle">Correo electrónico</label>
     <input id="email" name="email" type="email" required />
 
-    <label for="telefono" class="subtitulo">Teléfono</label>
-    <input id="telefono" name="telefono" type="text" />
+    <label for="telefono" class="subtitulo labeltitle">Teléfono</label>
+    <input id="telefono" name="telefono labeltitle" type="text" />
 
-    <label for="paquete" class="subtitulo">Paquete de interés</label>
+    <label for="paquete" class="subtitulo labeltitle">Paquete de interés</label>
     <select id="paquete" name="paquete" required>
-      <option value="" disabled selected class="subtitulo">Selecciona un paquete</option>
-      <option value="basico" class="subtitulo">Básico</option>
-      <option value="premium" class="subtitulo">Premium</option>
-      <option value="personalizado" class="subtitulo">Personalizado</option>
-      <option value="otro" class="subtitulo">Otro / Consultar</option>
+      <option value="" disabled selected class="subtitulo labeltitle">Selecciona un paquete</option>
+      <option value="basico" class="subtitulo labeltitle">Básico</option>
+      <option value="premium" class="subtitulo labeltitle">Premium</option>
+      <option value="personalizado" class="subtitulo labeltitle">Personalizado</option>
+      <option value="otro" class="subtitulo labeltitle">Otro / Consultar</option>
     </select>
 
-    <label for="mensaje" class="subtitulo">Mensaje</label>
+    <label for="mensaje" class="subtitulo labeltitle">Mensaje</label>
     <textarea
       id="mensaje"
       name="mensaje"
@@ -136,7 +148,7 @@
 
     <div class="checkbox-group">
       <input id="privacidad" name="privacidad" type="checkbox" required />
-      <label for="privacidad" class="subtitulo">Acepto la política de privacidad</label>
+      <label for="privacidad" class="subtitulo labeltitle">Acepto la política de privacidad</label>
     </div>
 
     <button type="submit" class="subtitulo">Enviar</button>
