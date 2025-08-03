@@ -1,15 +1,17 @@
 <style>
   .subtitulo {
     font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
   }
+
   .titulo {
     font-family: "Great Vibes", cursive;
-  font-weight: 400;
-  font-style: normal;
+    font-weight: 400;
+    font-style: normal;
   }
+
   section.paquetes {
     background-color: #FAF5ED;
     color: #333;
@@ -38,16 +40,21 @@
   }
 
   .package-card {
+    position: relative;
+    max-height: 420px;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
     border: 2px solid #C6A664;
     border-radius: 0.75rem;
     padding: 2rem 1.5rem;
     background-color: #fff;
     box-shadow: 0 2px 8px rgba(198, 166, 100, 0.15);
-    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
   }
 
-  .package-card:hover {
-    transform: translateY(-8px);
+  .package-card.expanded {
+    max-height: 2000px;
   }
 
   .package-title {
@@ -89,8 +96,30 @@
   .package-cta:hover {
     background-color: #b89a44;
   }
+
   .lista {
     font-size: 20px;
+  }
+
+  .read-more-btn {
+    background: linear-gradient(to top, white 60%, transparent);
+    text-align: center;
+    padding: 1rem 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: #C6A664;
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transition: all 0.3s ease;
+  }
+
+  .package-card.expanded .read-more-btn {
+    position: static;
+    background: none;
+    margin-top: 1rem;
   }
 
   @media (min-width: 768px) {
@@ -101,9 +130,10 @@
     .paquetes h2 {
       font-size: 84px;
     }
+
     .paquetes p {
-    font-size: 24px;
-  }
+      font-size: 24px;
+    }
   }
 </style>
 
@@ -112,39 +142,82 @@
   <p style="margin-bottom: 40px;" class="subtitulo">Elige el paquete que mejor se adapte a tu evento y presupuesto.</p>
 
   <div class="package-grid">
+    <!-- Clásico -->
     <article class="package-card">
-      <h3 class="package-title titulo paquetestitulo">Básico</h3>
-      <p class="package-price subtitulo">$1,200 MXN</p>
-      <!-- <ul class="package-features">
-        <li class="subtitulo lista">*Diseño personalizado básico</li>
-        <li class="subtitulo lista">*Enlace para compartir</li>
-        <li class="subtitulo lista">*RSVP incluido</li>
-      </ul> -->
-      <a href="#solicitar" class="package-cta subtitulo">Solicitar</a>
+      <div class="package-content">
+        <h3 class="package-title titulo paquetestitulo">Clásico</h3>
+        <p class="package-price subtitulo">$1,200 MXN</p>
+        <ul class="package-features">
+          <li class="subtitulo lista">- Prediseño a elegir</li>
+          <li class="subtitulo lista">- Hasta 15 fotografías incluidas en la galería.</li>
+          <li class="subtitulo lista">- Datos del evento (fecha, hora y lugar)</li>
+          <li class="subtitulo lista">- Confirmación de asistencia por Whatsapp</li>
+          <li class="subtitulo lista">- Soporte técnico por correo electrónico durante 3 días posteriores a la entrega. Para solucionar errores o responder dudas básicas.</li>
+          <li class="subtitulo lista">- Incluye 2 modificaciones menores (texto, imagen, fecha)</li>
+        </ul>
+        <a href="#solicitar" class="package-cta subtitulo">Solicitar</a>
+      </div>
+      <div class="read-more-btn" onclick="toggleExpand(this)">Leer más</div>
     </article>
 
+    <!-- Premium -->
     <article class="package-card">
-      <h3 class="package-title titulo paquetestitulo">Premium</h3>
-      <p class="package-price subtitulo">$2,000 MXN</p>
-      <!-- <ul class="package-features">
-        <li class="subtitulo lista">*Diseño personalizado avanzado</li>
-        <li class="subtitulo lista">*Integración con música y fotos</li>
-        <li class="subtitulo lista">*RSVP + Confirmación por email</li>
-        <li class="subtitulo lista">*Asistencia técnica 24/7</li>
-      </ul> -->
-      <a href="#solicitar" class="package-cta">Solicitar</a>
+      <div class="package-content">
+        <h3 class="package-title titulo paquetestitulo">Premium</h3>
+        <p class="package-price subtitulo">$2,000 MXN</p>
+        <ul class="package-features">
+          <li class="subtitulo lista">- Diseño personalizado.</li>
+          <li class="subtitulo lista">- Hasta 15 fotos.</li>
+          <li class="subtitulo lista">- Datos del evento: fecha, hora y lugar.</li>
+          <li class="subtitulo lista">- Confirmación por WhatsApp.</li>
+          <li class="subtitulo lista">- Cuenta regresiva animada.</li>
+          <li class="subtitulo lista">- Hasta 3 frases del evento.</li>
+          <li class="subtitulo lista">- Mapa + ubicación GPS.</li>
+          <li class="subtitulo lista">- Lista o mesa de regalos.</li>
+          <li class="subtitulo lista">- Música de fondo (opcional).</li>
+          <li class="subtitulo lista">- Música de fondo (opcional).</li>
+          <li class="subtitulo lista">- Soporte por correo y WhatsApp, Vigencia: 7 días posteriores a la entrega.</li>
+          <li class="subtitulo lista">- Incluye 4 modificaciones menores (texto, imagen o fecha).</li>
+        </ul>
+        <a href="#solicitar" class="package-cta">Solicitar</a>
+      </div>
+      <div class="read-more-btn" onclick="toggleExpand(this)">Leer más</div>
     </article>
 
+    <!-- Magnífico -->
     <article class="package-card">
-      <h3 class="package-title titulo paquetestitulo">Magnífica</h3>
-      <p class="package-price subtitulo">Desde $2,500 MXN</p>
-      <!-- <ul class="package-features">
-        <li class="subtitulo lista">*Diseño a medida completo</li>
-        <li class="subtitulo lista">*Funcionalidades exclusivas</li>
-        <li class="subtitulo lista">*Soporte premium</li>
-        <li class="subtitulo lista">*Consultoría y seguimiento</li>
-      </ul> -->
-      <a href="#solicitar" class="package-cta subtitulo">Solicitar</a>
+      <div class="package-content">
+        <h3 class="package-title titulo paquetestitulo">Magnífico</h3>
+        <p class="package-price subtitulo">Desde $2,500 MXN</p>
+        <ul class="package-features">
+          <li class="subtitulo lista">- Fotos ilimitadas.</li>
+          <li class="subtitulo lista">- Diseño 100% a medida y exclusivo.</li>
+          <li class="subtitulo lista">- Portada animada del evento.</li>
+          <li class="subtitulo lista">- Datos del evento: fecha, hora y lugar.</li>
+          <li class="subtitulo lista">- Confirmación de asistencia por WhatsApp.</li>
+          <li class="subtitulo lista">- Cuenta regresiva animada.</li>
+          <li class="subtitulo lista">- Frases personalizadas sobre el evento.</li>
+          <li class="subtitulo lista">- Mapa interactivo con ubicación GPS.</li>
+          <li class="subtitulo lista">- Sección para mesa o lista de regalos.</li>
+          <li class="subtitulo lista">- Música de fondo (opcional).</li>
+          <li class="subtitulo lista">- Cronograma detallado del evento.</li>
+          <li class="subtitulo lista">- Incluye 20 pases digitales (pase extra: $15 MXN c/u).</li>
+          <li class="subtitulo lista">- Trivia interactiva: ¿Qué tanto conoces al festejado?.</li>
+          <li class="subtitulo lista">- Sección de dedicatorias: los invitados pueden enviar mensajes.</li>
+          <li class="subtitulo lista">- Atención prioritaria por WhatsApp, Vigencia: 15 días posteriores a la entrega.</li>
+          <li class="subtitulo lista">- Modificaciones ilimitadas</li>
+        </ul>
+        <a href="#solicitar" class="package-cta subtitulo">Solicitar</a>
+      </div>
+      <div class="read-more-btn" onclick="toggleExpand(this)">Leer más</div>
     </article>
   </div>
 </section>
+
+<script is:inline>
+  function toggleExpand(btn) {
+    const card = btn.closest('.package-card');
+    card.classList.toggle('expanded');
+    btn.textContent = card.classList.contains('expanded') ? 'Leer menos' : 'Leer más';
+  }
+</script>
